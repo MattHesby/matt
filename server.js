@@ -5,7 +5,7 @@ var Recaptcha = require('recaptcha').Recaptcha;
 var app = express();
 var https = require('https');
 
-var SECRET = "6LeMix0TAAAAAJU9QPUUz7xeZQ77n7jhV1YMenJu";
+var SECRET = "PUTSECRETHERE";
 
 
 app.use(express.static('public'));
