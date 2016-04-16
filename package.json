@@ -4,7 +4,11 @@
   "description": "Personal Website",
   "main": "server.js",
   "dependencies": {
-    "express": "^4.13.4"
+    "body-parser": "^1.15.0",
+    "express": "^4.13.4",
+    "nodemailer": "^2.3.2",
+    "recaptcha": "^1.2.1",
+    "xoauth2": "^1.1.0"
   },
   "devDependencies": {},
   "scripts": {
