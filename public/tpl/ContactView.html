@@ -1,3 +1,19 @@
+
+
+<script type="text/javascript">
+  var onloadCallback = function () {
+    console.log('recaptcha is ready'); // not showing
+    grecaptcha.render("recaptcha", {
+        sitekey: '6LeMix0TAAAAAHXLEndCVrXLJcA27vai8pcbZJ1_',
+        callback: function () {
+            console.log('recaptcha callback');
+        }
+    });
+  }
+</script>
+
+<script src="https://www.google.com/recaptcha/api.js?onload=recaptchaCallback&render=explicit&hl=iw" async defer></script>
+
 <h1 class="title text-center">Send Me An Email</h1>
 <div class="col-md-8 col-md-offset-1" role="form" class="wpcf7" id="wpcf7-f83-p16-o1" dir="ltr">
 
@@ -36,7 +52,8 @@
       <label for="send" class="col-sm-2 control-label">Send</label>
       <div class="row">
         <div class="col-sm-4">
-          <div class="g-recaptcha" style="transform:scale(0.8);transform-origin:0 0" data-sitekey="6LeMix0TAAAAAHXLEndCVrXLJcA27vai8pcbZJ1_"></div>
+          <div style="transform:scale(0.8);transform-origin:0 0" id="recaptcha"></div>
+          <!-- <div class="g-recaptcha" style="transform:scale(0.8);transform-origin:0 0" data-sitekey="6LeMix0TAAAAAHXLEndCVrXLJcA27vai8pcbZJ1_"></div> -->
 
         </div>
 
@@ -48,4 +65,8 @@
     </div>
   </form>
 
+
+  <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+      async defer>
+  </script>
 </div>
